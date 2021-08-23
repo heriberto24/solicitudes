@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteHead.Master.cs" Inherits="WebForms.Views.Layout.SiteMaterialize" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+    <title></title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/Views/Layout/css/styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="phStyles" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="body" runat="server" class="backgroundBody">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="smGeneral"></asp:ScriptManager>
+
+        <%--NAV--%>
+        <nav class="masterBack" role="navigation" runat="server" id="navigation">
+            <div class="nav-wrapper navExtra">
+                <a id="logo-container" href="#" class="brand-logo">Solicitudes</a>
+                <a href="#" data-target="slideout" runat="server" id="btnMenu" class="sidenav-trigger show-on-large menuBtnClass">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="" class="right hide-on-med-and-down">
+                    <li>
+                        <asp:LinkButton ID="closeBtn" runat="server" Text="Cerrar sesión" OnClick="closeBtn_Click"></asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <ul id="slideout" runat="server" class="sidenav masterBack white-text">
+            <li>
+                <div class="user-view">
+                    <asp:Label Text="" ID="txtNombreUsuarioIniciado" runat="server" />
+                </div>
+            </li>
+            <li>
+                <div class="divider" runat="server" id="divideAdm"></div>
+            </li>
+            <li>
+                <a class="subheader white-text" id="adminSep" runat="server">
+                    Administración
+                    <i class="material-icons white-text">
+                        manage_accounts
+                    </i>
+                </a>
+            </li>
+            <li runat="server" class="optionLink">
+                <asp:LinkButton ID="aspirantesBtn" CssClass="white-text" runat="server" Text="Aspirantes" OnClick="aspirantesBtn_Click"></asp:LinkButton>
+            </li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a class="subheader white-text">Solicitud
+                <i class="material-icons white-text">
+                    assignment_ind
+                </i>
+                </a>
+            </li>
+        </ul>
+        <%--NAV--%>
+        <%--CONTENT--%>
+        <asp:ContentPlaceHolder ID="phBody" runat="server">
+
+        </asp:ContentPlaceHolder>
+        <%--CONTENT--%>
+        <%--MODAL--%>
+        <asp:ContentPlaceHolder ID="sModal" runat="server"></asp:ContentPlaceHolder>
+        <%--MODAL--%>
+        <%--FOOTER--%>
+        <footer class="page-footer complement footerClass" runat="server" id="footerMaster">
+                <div class="row right-align container black-text">
+                    © 2014 Copyright Text
+                </div>
+        </footer>
+        <%--FOOTER--%>
+        <!-- JAVASCRIPT  -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <asp:ContentPlaceHolder ID="phScripts" runat="server"></asp:ContentPlaceHolder>
+        <script>
+            (function ($) {
+                $(function () {
+                    $('.sidenav').sidenav();
+                    $('input#input_text, textarea#textarea2').characterCounter();
+                    $('select').formSelect();
+                    $('.modal').modal();
+                    $('.parallax').parallax();
+                }); // end of document ready
+            })(jQuery); // end of jQuery name space
+        </script>
+    </form>
+</body>
+</html>

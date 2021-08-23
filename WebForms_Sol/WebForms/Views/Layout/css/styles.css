@@ -1,0 +1,86 @@
+.correctionRow {
+    margin-bottom: 0px;
+}
+.disabledPadding {
+    padding: 0px !important;
+}
+
+.masterBack {
+    background-color: #006064 !important;
+}
+
+.complement {
+    background-color: #b0bec5 !important;
+}
+
+.navExtra {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.optionLink:hover {
+    background-color: #00838f !important;
+}
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footerClass {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.backgroundBody {
+    background-image: url('../../../resources/background3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.backgroundBodyIn {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+
+.loginCard {
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: auto;
+    margin-right: 20px;
+    width: 400px;
+    height: 600px;
+    background-color: rgba(0,0,0,0.7) !important;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.justify-content-center {
+    padding: 20px;
+}
+
+.links {
+    color: white;
+}
+
+    .links a {
+        margin-left: 4px;
+    }
+
+@media only screen and (min-width: 992px) {
+    .menuBtnClass {
+        margin: 0 157px !important;
+    }
+}
